@@ -1,2 +1,4 @@
-# zodiac-killer
-Pure destruction.
+# Zodiac Killer
+
+Ultimate destruction. 
+PLEASE ONLY RUN THIS PROGRAM ON A VM. WE ARE NOT RESPONSIBLE FOR ANY DAMAGE DONE BY USING IT INAPPROPRIATELY
