@@ -1,5 +1,4 @@
 # Zodiac Killer
 
-Ultimate destruction. 
-
-PLEASE ONLY RUN THIS PROGRAM ON A VM. WE ARE NOT RESPONSIBLE FOR ANY DAMAGE DONE BY USING IT INAPPROPRIATELY
+Purely destructive.
+Do not run this unless it's in a VM or you feel like torching your PC for some reason.
