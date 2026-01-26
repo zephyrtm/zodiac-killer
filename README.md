@@ -1,5 +1,3 @@
-# Zodiac Killer
+# src branch
 
-Ultimate destruction. 
-
-PLEASE ONLY RUN THIS PROGRAM ON A VM. WE ARE NOT RESPONSIBLE FOR ANY DAMAGE DONE BY USING IT INAPPROPRIATELY
+Putting more source codes, and mostly ideas for trolls
