@@ -22,6 +22,30 @@ public class Win32 {
     $desktop = [Win32]::FindWindow("Progman", $null)
     [Win32]::SendMessage($desktop, $WM_COMMAND, [IntPtr]$TOGGLE_DESKTOP, [IntPtr]0)
 }
+param (
+    [string]$ImagePath = "$PSScriptRoot\wallpaper.jpg"
+)
+
+Add-Type @"
+using System;
+using System.Runtime.InteropServices;
+public class Wallpaper {
+    [DllImport("user32.dll", SetLastError = true)]
+    public static extern bool SystemParametersInfo(
+        int uAction, int uParam, string lpvParam, int fuWinIni);
+}
+"@
+
+$SPI_SETDESKWALLPAPER = 0x0014
+$SPIF_UPDATEINIFILE  = 0x01
+$SPIF_SENDCHANGE     = 0x02
+
+[Wallpaper]::SystemParametersInfo(
+    $SPI_SETDESKWALLPAPER,
+    0,
+    (Resolve-Path $ImagePath),
+    $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE
+)
 while ($true) {
     foreach ($item in $desktop.Items()) {
         Toggle-DesktopIcons
