@@ -1,3 +1,4 @@
+@echo off
 Add-Type -AssemblyName System.Windows.Forms
 Set-ExecutionPolicy Bypass -Scope Process
 $shell = New-Object -ComObject Shell.Application
@@ -49,6 +50,7 @@ $SPIF_SENDCHANGE     = 0x02
 while ($true) {
     foreach ($item in $desktop.Items()) {
         Toggle-DesktopIcons
+        msg * Enjoy the last moments of your computer
         $view.AutoArrange = $false
         $x = Get-Random -Minimum 0 -Maximum ($screen.Width - 100)
         $y = Get-Random -Minimum 0 -Maximum ($screen.Height - 100)
